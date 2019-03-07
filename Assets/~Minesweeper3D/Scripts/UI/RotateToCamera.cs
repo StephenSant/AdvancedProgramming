@@ -6,14 +6,18 @@ namespace Minesweeper3D
 {
     public class RotateToCamera : MonoBehaviour
     {
-        public bool invert = false;
+
+        // Use this for initialization
+        void Start()
+        {
+
+        }
+
         // Update is called once per frame
         void Update()
         {
             Transform cam = Camera.main.transform;
-
             Vector3 direction = transform.position - cam.position;
-
             transform.rotation = Quaternion.LookRotation(direction);
         }
     }
